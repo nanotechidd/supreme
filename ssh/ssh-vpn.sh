@@ -20,7 +20,7 @@ commonname=none
 email=none
 
 # simple password minimal
-curl -sS https://raw.githubusercontent.com/nanotechid/supreme/aio/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://raw.githubusercontent.com/nanotechidd/supreme/aio/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -266,38 +266,38 @@ netfilter-persistent reload
 # download script
 cd /usr/bin
 # menu
-wget -O menu "https://raw.githubusercontent.com/nanotechid/supreme/aio/menu/menu.sh"
-wget -O m-vmess "https://raw.githubusercontent.com/nanotechid/supreme/aio/menu/m-vmess.sh"
-wget -O m-vless "https://raw.githubusercontent.com/nanotechid/supreme/aio/menu/m-vless.sh"
-wget -O running "https://raw.githubusercontent.com/nanotechid/supreme/aio/menu/running.sh"
-wget -O clearcache "https://raw.githubusercontent.com/nanotechid/supreme/aio/menu/clearcache.sh"
-wget -O m-ssws "https://raw.githubusercontent.com/nanotechid/supreme/aio/menu/m-ssws.sh"
-wget -O m-trojan "https://raw.githubusercontent.com/nanotechid/supreme/aio/menu/m-trojan.sh"
+wget -O menu "https://raw.githubusercontent.com/nanotechidd/supreme/aio/menu/menu.sh"
+wget -O m-vmess "https://raw.githubusercontent.com/nanotechidd/supreme/aio/menu/m-vmess.sh"
+wget -O m-vless "https://raw.githubusercontent.com/nanotechidd/supreme/aio/menu/m-vless.sh"
+wget -O running "https://raw.githubusercontent.com/nanotechidd/supreme/aio/menu/running.sh"
+wget -O clearcache "https://raw.githubusercontent.com/nanotechidd/supreme/aio/menu/clearcache.sh"
+wget -O m-ssws "https://raw.githubusercontent.com/nanotechidd/supreme/aio/menu/m-ssws.sh"
+wget -O m-trojan "https://raw.githubusercontent.com/nanotechidd/supreme/aio/menu/m-trojan.sh"
 
 # menu ssh ovpn
-wget -O m-sshovpn "https://raw.githubusercontent.com/nanotechid/supreme/aio/menu/m-sshovpn.sh"
-wget -O usernew "https://raw.githubusercontent.com/nanotechid/supreme/aio/ssh/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/nanotechid/supreme/aio/ssh/trial.sh"
-wget -O renew "https://raw.githubusercontent.com/nanotechid/supreme/aio/ssh/renew.sh"
-wget -O hapus "https://raw.githubusercontent.com/nanotechid/supreme/aio/ssh/hapus.sh"
-wget -O cek "https://raw.githubusercontent.com/nanotechid/supreme/aio/ssh/cek.sh"
-wget -O member "https://raw.githubusercontent.com/nanotechid/supreme/aio/ssh/member.sh"
-wget -O delete "https://raw.githubusercontent.com/nanotechid/supreme/aio/ssh/delete.sh"
-wget -O autokill "https://raw.githubusercontent.com/nanotechid/supreme/aio/ssh/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/nanotechid/supreme/aio/ssh/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/nanotechid/supreme/aio/ssh/tendang.sh"
+wget -O m-sshovpn "https://raw.githubusercontent.com/nanotechidd/supreme/aio/menu/m-sshovpn.sh"
+wget -O usernew "https://raw.githubusercontent.com/nanotechidd/supreme/aio/ssh/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/nanotechidd/supreme/aio/ssh/trial.sh"
+wget -O renew "https://raw.githubusercontent.com/nanotechidd/supreme/aio/ssh/renew.sh"
+wget -O hapus "https://raw.githubusercontent.com/nanotechidd/supreme/aio/ssh/hapus.sh"
+wget -O cek "https://raw.githubusercontent.com/nanotechidd/supreme/aio/ssh/cek.sh"
+wget -O member "https://raw.githubusercontent.com/nanotechidd/supreme/aio/ssh/member.sh"
+wget -O delete "https://raw.githubusercontent.com/nanotechidd/supreme/aio/ssh/delete.sh"
+wget -O autokill "https://raw.githubusercontent.com/nanotechidd/supreme/aio/ssh/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/nanotechidd/supreme/aio/ssh/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/nanotechidd/supreme/aio/ssh/tendang.sh"
 
 # menu system
-wget -O m-system "https://raw.githubusercontent.com/nanotechid/supreme/aio/menu/m-system.sh"
-wget -O m-domain "https://raw.githubusercontent.com/nanotechid/supreme/aio/menu/m-domain.sh"
-wget -O add-host "https://raw.githubusercontent.com/nanotechid/supreme/aio/ssh/add-host.sh"
-wget -O certv2ray "https://raw.githubusercontent.com/nanotechid/supreme/aio/xray/certv2ray.sh"
-wget -O speedtest "https://raw.githubusercontent.com/nanotechid/supreme/aio/ssh/speedtest_cli.py"
-wget -O auto-reboot "https://raw.githubusercontent.com/nanotechid/supreme/aio/menu/auto-reboot.sh"
-wget -O restart "https://raw.githubusercontent.com/nanotechid/supreme/aio/menu/restart.sh"
-wget -O bw "https://raw.githubusercontent.com/nanotechid/supreme/aio/menu/bw.sh"
-wget -O m-tcp "https://raw.githubusercontent.com/nanotechid/supreme/aio/menu/tcp.sh"
-wget -O xp "https://raw.githubusercontent.com/nanotechid/supreme/aio/ssh/xp.sh"
+wget -O m-system "https://raw.githubusercontent.com/nanotechidd/supreme/aio/menu/m-system.sh"
+wget -O m-domain "https://raw.githubusercontent.com/nanotechidd/supreme/aio/menu/m-domain.sh"
+wget -O add-host "https://raw.githubusercontent.com/nanotechidd/supreme/aio/ssh/add-host.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/nanotechidd/supreme/aio/xray/certv2ray.sh"
+wget -O speedtest "https://raw.githubusercontent.com/nanotechidd/supreme/aio/ssh/speedtest_cli.py"
+wget -O auto-reboot "https://raw.githubusercontent.com/nanotechidd/supreme/aio/menu/auto-reboot.sh"
+wget -O restart "https://raw.githubusercontent.com/nanotechidd/supreme/aio/menu/restart.sh"
+wget -O bw "https://raw.githubusercontent.com/nanotechidd/supreme/aio/menu/bw.sh"
+wget -O m-tcp "https://raw.githubusercontent.com/nanotechidd/supreme/aio/menu/tcp.sh"
+wget -O xp "https://raw.githubusercontent.com/nanotechidd/supreme/aio/ssh/xp.sh"
 
 chmod +x menu
 chmod +x m-vmess

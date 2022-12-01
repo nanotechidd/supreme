@@ -3,11 +3,11 @@ import socket, threading, thread, select, signal, sys, time, getopt
 # Python Proxy ou Socks
 
 # Porta do Proxy
-#proxyport = input('\033[34mDIGITE A PORTA DO PROXY \033[0;0m <--> \033[0m Nao pode ser uma porta que ja esteja usando: ')
+proxyport = input('\033[34mDIGITE A PORTA DO PROXY \033[0;0m <--> \033[0m Nao pode ser uma porta que ja esteja usando: ')
 
 # CONFIG
 LISTENING_ADDR = '0.0.0.0'
-LISTENING_PORT = 8989
+LISTENING_PORT = proxyport
 
 PASS = ''
 
@@ -15,7 +15,7 @@ PASS = ''
 BUFLEN = 4096 * 4
 TIMEOUT = 60
 DEFAULT_HOST = '127.0.0.1:22'
-RESPONSE = 'HTTP/1.1 200 <font color="red">HaileyKenVPN Proxy</font>\r\n\r\n'
+RESPONSE = 'HTTP/1.1 200 <font color="red">Python Proxy / Socks</font>\r\n\r\n'
 #RESPONSE = 'HTTP/1.1 200 Hello_World!\r\nContent-length: 0\r\n\r\nHTTP/1.1 200 Connection established\r\n\r\n'  # lint:ok
 
 
@@ -265,13 +265,13 @@ def main(host=LISTENING_ADDR, port=LISTENING_PORT):
     server.start()
 
     while True:
-
-            time.sleep(2)
-        except KeyboardInterrupt:
+        try:
+           #time.sleep(2)
+        #except KeyboardInterrupt:
             print '\033[31m'+'----PARANDO'+'\033[0;0m'
             server.close()
-#server.start()
-           break
+except KeyboardInterrupt:
+            break
 
 if __name__ == '__main__':
     parse_args(sys.argv[1:])

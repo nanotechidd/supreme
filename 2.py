@@ -3,7 +3,7 @@ import socket, threading, thread, select, signal, sys, time, getopt
 # Python Proxy ou Socks
 
 # Porta do Proxy
-#proxyport = input('\033[34mDIGITE A PORTA DO PROXY \033[0;0m <--> \033[0m Nao pode ser uma porta que ja esteja usando: ')
+proxyport = input('\033[34mDIGITE A PORTA DO PROXY \033[0;0m <--> \033[0m Nao pode ser uma porta que ja esteja usando: ')
 
 # CONFIG
 LISTENING_ADDR = '0.0.0.0'
@@ -266,10 +266,10 @@ def main(host=LISTENING_ADDR, port=LISTENING_PORT):
 
     while True:
         try:
-           time.sleep(10)
-        except KeyboardInterrupt:
+           #time.sleep(10)
+        #except KeyboardInterrupt:
             print '\033[31m'+'----PARANDO'+'\033[0;0m'
-            server.close()
+          #  server.close()
 #except KeyboardInterrupt:
             break
 

@@ -7,7 +7,7 @@ proxyport = input('\033[34mDIGITE A PORTA DO PROXY \033[0;0m <--> \033[0m Nao po
 
 # CONFIG
 LISTENING_ADDR = '0.0.0.0'
-LISTENING_PORT = 8989
+LISTENING_PORT = proxyport
 
 PASS = ''
 

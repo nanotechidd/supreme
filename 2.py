@@ -266,10 +266,10 @@ def main(host=LISTENING_ADDR, port=LISTENING_PORT):
 
     while True:
        # try:
-           #time.sleep(10)
-        #except KeyboardInterrupt:
+           time.sleep(10)
+        except KeyboardInterrupt:
             print '\033[31m'+'----PARANDO'+'\033[0;0m'
-          #  server.close()
+           server.start()
 #except KeyboardInterrupt:
             break
 

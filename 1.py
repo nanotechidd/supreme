@@ -265,7 +265,12 @@ def main(host=LISTENING_ADDR, port=LISTENING_PORT):
     server.start()
 
     while True:
-       
+           # time.sleep(2)
+        #except KeyboardInterrupt:
+            print '\033[31m'+'----PARANDO'+'\033[0;0m'
+            server.close()
+#server.start()
+           break
 
 if __name__ == '__main__':
     parse_args(sys.argv[1:])

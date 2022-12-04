@@ -4,7 +4,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/nanotechidd/supreme/permission/ip > /root/tmp
+    curl -sS https://raw.githubusercontent.com/nanotechidd/supreme/aio/permission/ip > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -15,14 +15,14 @@ BURIQ () {
     if [[ "$exp2" -le "0" ]]; then
     echo $user > /etc/.$user.ini
     else
-    rm -f /etc/.$user.ini > /dev/null 2>&1
+    rm -f  /etc/.$user.ini > /dev/null 2>&1
     fi
     done
-    rm -f /root/tmp
+    rm -f  /root/tmp
 }
-
+# https://raw.githubusercontent.com/nanotechidd/supreme/aio/permission/ip 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/nanotechidd/supreme/permission/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/nanotechidd/supreme/aio/permission/ip | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -40,30 +40,14 @@ fi
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
     IZIN=$(curl -sS https://raw.githubusercontent.com/nanotechidd/supreme/aio/permission/ip | awk '{print $4}' | grep $MYIP)
-if [ $MYIP = $IZIN ]; then
-echo -e "\e[32mPermission Accepted...\e[0m"
-else
-echo -e "\e[31mPermission Denied!\e[0m";
-exit 0
-fi
+    if [ "$MYIP" = "$IZIN" ]; then
+    Bloman
+    else
+    res="Permission Denied!"
+    fi
     BURIQ
 }
-red='\e[1;31m'
-green='\e[0;32m'
-NC='\e[0m'
-green() { echo -e "\\033[32;1m${*}\\033[0m"; }
-red() { echo -e "\\033[31;1m${*}\\033[0m"; }
-PERMISSION
 
-if [ -f /home/needupdate ]; then
-red "Your script need to update first !"
-exit 0
-elif [ "$res" = "Permission Accepted..." ]; then
-echo -ne
-else
-red "Permission Denied!"
-exit 0
-fi
 
 clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^#! " "/etc/xray/config.json")
